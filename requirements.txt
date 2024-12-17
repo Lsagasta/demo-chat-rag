@@ -1,0 +1,10 @@
+pypdf
+cohere
+tiktoken
+sentence-transformers
+pinecone-client
+langchain-community
+langchain-pinecone
+langchain_openai
+langchain
+openai
