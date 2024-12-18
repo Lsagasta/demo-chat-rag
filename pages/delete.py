@@ -2,7 +2,7 @@ import streamlit as st
 from pinecone import Pinecone
 
 # Configuración de Pinecone
-
+pinecone = Pinecone(api_key="pcsk_5xk6d7_NLDEknysnpANqSxmRdzzNpgiPZn6czJwje4Jw9dNwMaNnxe7iAKnfYmA6AciDnh")
 # Consultar índices
 indices = pinecone.list_indexes()
 nombres_indices = [indice['name'] for indice in indices]

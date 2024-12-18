@@ -3,7 +3,7 @@ from pinecone import Pinecone
 import re
 
 # Configuración de Pinecone
-
+pinecone = Pinecone(api_key="pcsk_5xk6d7_NLDEknysnpANqSxmRdzzNpgiPZn6czJwje4Jw9dNwMaNnxe7iAKnfYmA6AciDnh")
 st.header("Crear un índice en Pinecone")
 
 # Entrada del nombre del índice
@@ -14,8 +14,8 @@ def validar_nombre(nombre):
     return bool(re.match(r'^[a-z0-9\-]+$', nombre))
 
 # Configuración del índice
-dimension = st.number_input("Dimensión del índice", min_value=1, step=1, value=1536)
-st.write("text-embedding-ada-002 : 1536 dimensiones")
+dimension = st.number_input("Dimensión del índice (text-embedding-ada-002 : 1536 dimensiones)", min_value=1, step=1, value=1536)
+st.write("")
 metric = st.selectbox("Métrica de similitud", ["cosine", "euclidean", "dotproduct"])
 cloud = st.selectbox("Proveedor de nube", ["aws", "gcp", "azure"])
 region = st.selectbox("Región", ["us-east-1", "us-west-1", "europe-west1"])
