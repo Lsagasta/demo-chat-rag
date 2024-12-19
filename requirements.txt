@@ -8,3 +8,4 @@ langchain-pinecone
 langchain_openai
 langchain
 openai
+streamlit
