@@ -6,10 +6,7 @@ from langchain_community.embeddings import OpenAIEmbeddings
 from langchain_pinecone import PineconeVectorStore
 from langchain.schema import Document
 import os
-from dotenv import load_dotenv
 
-# Cargar variables de entorno
-load_dotenv()
 
 def get_pdf_text(pdf_docs):
     text = ""
@@ -45,8 +42,8 @@ def crear_embeddings(chunks, option):
     )
 
 # Inicializar 
-pinecone_api_key = os.environ.get("PINECONE_API_KEY")
-pinecone = Pinecone(api_key=pinecone_api_key)
+pinecone = Pinecone(api_key=st.secrets["PINECONE_API_KEY"])
+
 
 st.subheader("1. Seleccionar documentos")
 pdf_docs = st.file_uploader("Choose a PDF file", accept_multiple_files=True)

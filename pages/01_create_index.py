@@ -3,7 +3,10 @@ from pinecone import Pinecone
 import re
 
 # Configuración de Pinecone
-pinecone = Pinecone(api_key="pcsk_5xk6d7_NLDEknysnpANqSxmRdzzNpgiPZn6czJwje4Jw9dNwMaNnxe7iAKnfYmA6AciDnh")
+
+
+# Instancio un objeto Pinecone
+pc = Pinecone(api_key=st.secrets["PINECONE_API_KEY"])
 st.header("Crear un índice en Pinecone")
 
 # Entrada del nombre del índice

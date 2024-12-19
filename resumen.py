@@ -2,7 +2,9 @@ import streamlit as st
 from pinecone import Pinecone
 
 # Configuración de Pinecone
-pinecone = Pinecone(api_key="pcsk_5xk6d7_NLDEknysnpANqSxmRdzzNpgiPZn6czJwje4Jw9dNwMaNnxe7iAKnfYmA6AciDnh")
+
+# Instancio un objeto Pinecone
+pinecone = Pinecone(api_key=st.secrets["PINECONE_API_KEY"])
 INDEX_NAME = 'pruebas'
 nombres_indices = ""
 
