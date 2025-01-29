@@ -6,7 +6,8 @@ import re
 
 
 # Instancio un objeto Pinecone
-pc = Pinecone(api_key=st.secrets["PINECONE_API_KEY"])
+pinecone = Pinecone(api_key=st.secrets["PINECONE_API_KEY"])
+# pc = Pinecone(api_key=st.secrets["PINECONE_API_KEY"])
 st.header("Crear un índice en Pinecone")
 
 # Entrada del nombre del índice
